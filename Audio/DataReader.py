@@ -17,24 +17,32 @@ for line in sys.stdin:
 		if ("msg" in sensorData) :
             process = None
 			msg = sensorData["msg"]
-			if (msg == "Open") :
-                process = subprocess.Popen(path + "cabinetScript.sh")
-                cabinetPID = process.pid 
+			if (msg == "Open") : # related to the cabinet 
+                cabinetPID = startProcess("cabinetScript.sh")
 			elif (msg == "Closed") :
-                subprocess.Popen(path + "killScript.sh", cabinetPID)
+                killProcess(cabinetPID)
                 cabinetPID = None
-            elif (msg == "On") :
-                continue
+            elif (msg == "On") : # related to the microwave
+                microwavePID = startProcess("microwaveScript.sh")
             elif (msg == "Off") :
-                continue
-            elif (msg == "IN") :
-                continue
+                killProcess(microwavePID)
+                microwavePID = None 
+            elif (msg == "IN") : # related to the door
+                doorPID = startProcess("doorScript.sh")
             elif (msg == "OUT") :
-                continue 
-            elif (msg == "Touched"):
-                continue
+                killProcess(doorPID)
+                doorPID = None
+            elif (msg == "Touched"): # related to the fridge
+                fridgePID = startProcess("fridgeScript.sh")
             elif (msg == "Released"):
-                continue
+                killProcess(fridgePID)
+                fridgePID = None
 
+def startProcess(scriptName):
+    process = subprocess.Popen(path + scriptName)
+    return process.pid
+
+def killProcess(pid): 
+    subprocess.Popen(path + "killScript.sh", pid)
 
 			 
