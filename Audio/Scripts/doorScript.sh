@@ -1,3 +1,3 @@
 #!/bin/sh
 
-omxplayer ./../AudioFiles/WelcomeHome.mp3
+omxplayer /home/pi/Desktop/Module-6/Audio/AudioFiles/WelcomeHome.mp3 &

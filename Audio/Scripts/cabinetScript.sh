@@ -1,3 +1,3 @@
 #!/bin/sh
 
-omxplayer ./../AudioFiles/BowlsOnTable.mp3
+omxplayer /home/pi/Desktop/Module-6/Audio/AudioFiles/BowlsOnTable.mp3 &

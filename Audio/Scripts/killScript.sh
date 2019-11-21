@@ -1,3 +1,3 @@
 #!/bin/sh
 
-Kill -9 $1
+kill $(ps -u | grep omxplayer | awk '{print $2}')

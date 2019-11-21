@@ -1,3 +1,3 @@
 #!/bin/sh
 
-omxplayer ./../AudioFiles/CookingSounds.mp3
+omxplayer /home/pi/Desktop/Module-6/Audio/AudioFiles/CookingSounds.mp3 &
