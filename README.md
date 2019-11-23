@@ -23,9 +23,12 @@ Since all our sensors were in the kitchen, my goal was to make it very cohesive.
 These materials above are more relevant to task 2. For task 1, every member in the group was in charge of making a sensor and having that information transmitted on the network. My Raspberry Pi would pick up on the data from the sensor and output corresponding audio files detailed below alongside the sensor information.
 
 * Door sensor (ultrasonic sensor) - this sensor was mounted above the door to detect movement in and out of the door. Every detection resulted in an audio file of me saying "Welcome Home."
+  * ![Door](/Images/door.jpeg)
 * Freezer sensor (capacitive touch sensor) - the sensor was attached to the handle of the freezer. While it is being touched, an audio file of food cooking on the stove is played.
+  * ![Freezer](/Images/freezer.jpg)
 * Cabinet sensor (button) - the sensor was located inside the cabinet to detect whether it is open or not. When the cabinet is open, the sound of placing bowls and plates on the table to output.
 * Microwave sensor (piezoelectric sensor) - the sensor was located on the main button of the microwave. Touching that lead to an ASMR audio clip of someone eating crunchy food.
+  * ![Microwave](/Images/microwave.jpeg)
 
 The door, microwave, and freezer sensor were not near outlets, so those were powered by LiPo batteries. We were able to connect the cabinet sensor/ESP to the outlet due to its proximity, but also because of its need for additional power (one group members added motors to this ESP).
 
@@ -37,6 +40,8 @@ I first made individual shell scripts that would play each audio file. I then cr
 
 I had to configure the Pi to play audio from the audio jack. Once that was done, I attached the external speakers, and everything was ready to go!
 
+![Speakers](/Images/speakers.jpg)
+
 <a name="final"/>
 
 ## Final Result
@@ -44,6 +49,10 @@ I had to configure the Pi to play audio from the audio jack. Once that was done,
 Everything worked out okay. There were times the correct audio was not output, but those issues stemmed from the messages being sent from the sensor.
 
 My group mates and I did not coordinate as well when deciding what to pursue as a final project for this task, so 3/4 of us relied on sound. This made the following demo video quite hectic below, and I am not sure how well everything could be heard. I should have made more effort to properly record a demo of my kitchen sounds, but I will keep that in mind for next time.
+
+[Demo](https://www.youtube.com/watch?v=4AMsSqZdHdM)
+
+![Overview](/Images/overview.jpeg)
 
 <a name="difficulties"/>
 
